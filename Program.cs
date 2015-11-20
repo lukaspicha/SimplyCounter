@@ -12,15 +12,15 @@ namespace SimplyCounter
     {
         static void Main(string[] args)
         {
-            Hour h = new Hour(15, 24, null);
-            Minute m = new Minute(48, 60, h);
-            Sec s = new Sec(47, 60, m);
+            TimeStamp h = new TimeStamp(15, 24, null);
+            TimeStamp m = new TimeStamp(48, 60, h);
+            TimeStamp s = new TimeStamp(47, 60, m);
 
             while (true)
             {
                 Console.WriteLine(s.NextTimeStamp.NextTimeStamp.Value + ":" + s.NextTimeStamp.Value + ":" + s.Value);
                 s.Increase();
-                Thread.Sleep(500);
+                Thread.Sleep(00);
             }
         }
     }
