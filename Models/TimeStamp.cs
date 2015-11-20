@@ -25,7 +25,8 @@ namespace SimplyCounter.Models
             if (this.value == this.maxValue)
             {
                 this.value = 0;
-                this.nextTimeStamp.Increase();
+                if(this.nextTimeStamp != null)
+                    this.nextTimeStamp.Increase();
             }
         }
         public TimeStamp NextTimeStamp
