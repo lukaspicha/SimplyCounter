@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SimplyCounter.Models
 {
-    public abstract class TimeStamp : ICounter
+    public class TimeStamp : ICounter
     {
-        protected int value;
-        protected int maxValue;
-        protected TimeStamp nextTimeStamp;
+        private int value;
+        private int maxValue;
+        private TimeStamp nextTimeStamp;
 
         public TimeStamp(int initValue, int maxValue, TimeStamp nextTimeStamp)
         {
