@@ -12,15 +12,19 @@ namespace SimplyCounter
     {
         static void Main(string[] args)
         {
-            TimeStamp h = new TimeStamp(15, 24, null);
-            TimeStamp m = new TimeStamp(48, 60, h);
-            TimeStamp s = new TimeStamp(47, 60, m);
+            //init
+            TimeStampModel h = new TimeStampModel(15, 24, null);
+            TimeStampModel m = new TimeStampModel(48, 60, h);
+            TimeStampModel s = new TimeStampModel(47, 60, m);
 
-            while (true)
+            ///core
+            while (!Console.KeyAvailable)
             {
+                Console.WriteLine("Press any key to exit...");
                 Console.WriteLine(s.NextTimeStamp.NextTimeStamp.Value + ":" + s.NextTimeStamp.Value + ":" + s.Value);
+                Thread.Sleep(300);
                 s.Increase();
-                Thread.Sleep(00);
+                Console.Clear();
             }
         }
     }
