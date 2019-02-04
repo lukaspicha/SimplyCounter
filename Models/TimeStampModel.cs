@@ -40,6 +40,10 @@ namespace SimplyCounter.Models
                     this.nextTimeStamp.Increase();
             }
         }
+
+        public void Test() {
+        	
+        }
         /// <summary>
         /// Gets next TimeStamp.
         /// </summary>
